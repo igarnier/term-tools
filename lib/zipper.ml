@@ -120,15 +120,11 @@ struct
               "@[<hv 1>[%a %a@ %a@ %a]@]"
               P.pp
               prim
-              (pp_print_array
-                 ~pp_sep:(fun fmtr () -> fprintf fmtr "@ ")
-                 T.pp_sexp)
+              (Fmt.array ~sep:(fun fmtr () -> fprintf fmtr "@ ") T.pp_sexp)
               bef
               k
               ()
-              (pp_print_array
-                 ~pp_sep:(fun fmtr () -> fprintf fmtr "@ ")
-                 T.pp_sexp)
+              (Fmt.array ~sep:(fun fmtr () -> fprintf fmtr "@ ") T.pp_sexp)
               aft)
           fmtr
           ctxt
