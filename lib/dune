@@ -1,0 +1,10 @@
+(library
+  (name term_tools)
+  (public_name term-tools)
+  (libraries hashcons containers printbox printbox-text fmt)
+  (instrumentation (backend bisect_ppx))
+  (ocamlopt_flags (-warn-error -39 -O3)))
+
+(documentation
+ (package term-tools)
+  (mld_files :standard))

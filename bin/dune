@@ -1,0 +1,4 @@
+(executable
+ (public_name term_tools)
+ (name main)
+ (libraries term_tools))
